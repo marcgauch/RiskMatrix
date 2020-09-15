@@ -1,6 +1,6 @@
 # RiskMatrix
 
-## Benötigte Umngebung
+## Benötigte Umgebung
 Installation [Processing](https://processing.org/download/)
 
 ## Beispielmatrix
