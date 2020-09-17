@@ -14,10 +14,11 @@ void setup() {
    Text: String "Anzeige in Matrix",
    Description: String "Lange Bezeichnung")
    */
-
-
-  cases.add(new Case(0.8, 3.6, "LOREM IPSUM"));
-
+  
+  cases.add(new Case(1.3, 2.1, "Transporteur nicht verfügbar für kritischen Transport"));
+  cases.add(new Case(0.5, 2, "Tracking eines Transporteus fällt aus"));
+  cases.add(new Case(2.8, 1.5, "Tracking aller Transporteure fällt aus"));
+  
 
   Collections.sort(cases);
 
