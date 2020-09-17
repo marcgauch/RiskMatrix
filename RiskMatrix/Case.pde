@@ -1,4 +1,4 @@
-class Case implements Comparable<Case>{
+class Case implements Comparable<Case> {
 
   private final float possibility;
   private final float impact;
@@ -20,17 +20,19 @@ class Case implements Comparable<Case>{
   }
 
   public void showDescription(float posX, float posY, String name) {
+    textAlign(RIGHT, CENTER);
+    text(name + ":", posX - 10, posY);
     textAlign(LEFT, CENTER);
-    text(name + ":  " + this.description, posX, posY);
+    text(this.description, posX, posY);
   }
   private PVector getCoordinates(PVector zero, PVector max) {
     float x =  map(this.possibility, 0, 4, zero.x, max.x);
     float y = map(this.impact, 0, 4, zero.y, max.y);
     return new PVector(x, y);
   }
-  
+
   @Override
-  public int compareTo(Case o){
-   return int(this.possibility*1000 - o.possibility*1000); 
+    public int compareTo(Case o) {
+    return int(this.possibility*1000 - o.possibility*1000);
   }
 }
