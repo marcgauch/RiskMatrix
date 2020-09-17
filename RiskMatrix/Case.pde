@@ -33,6 +33,13 @@ class Case implements Comparable<Case> {
 
   @Override
     public int compareTo(Case o) {
-    return int(this.possibility*1000 - o.possibility*1000);
+      if (this.possibility > o.possibility){
+        return 1;
+      }
+      if (this.possibility < o.possibility){
+        return -1;
+      }
+      // now based on impact
+      return int(o.impact*1000 - this.impact*1000);
   }
 }
